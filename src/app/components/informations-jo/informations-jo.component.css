@@ -1,0 +1,20 @@
+.custom-info {
+  border: 3px solid darkcyan;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  width: 200px;
+
+}
+
+.infos {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.infos > div {
+  margin: 20px;
+  width: 200px;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+<div style=" text-align: center; display: flex; flex-direction: column">
+
+  <div height="30px" class="text-center">
+    <img src="assets/images/line.png" alt="line">
+    <div>
+      <app-informations-jo [nbJos]="nbJos" [nbCountries]="nbCountries"></app-informations-jo>
+    </div>
+  </div>
+  <div class="diagramme">
+    <ngx-charts-pie-chart
+      (window:resize)="onResize($event)"
+      [view]="view"
+      *ngIf="single"
+      [results]="single"
+      (select)="onSelect($event)"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+</div>
