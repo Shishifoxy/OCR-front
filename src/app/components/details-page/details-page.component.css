@@ -2,38 +2,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 80%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
+.country-name {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.country-name span {
+  background-color: turquoise;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .numbers-container {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.numbers-container > div {
-  flex: 1;
-  margin: 20px;
-  width: 230px;
-  color: black;
+.numbers-container div {
+  margin: 5px 0;
+  border: 2px solid turquoise;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
   text-align: center;
-  border: cadetblue 2px solid;
-  border-radius: 5px;
 }
 
 .chart-container {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.country-name {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: white;
-  border: cadetblue 2px solid;
-  background-color: cadetblue;
-  border-radius: 5px;
-  padding: 5px;
 }
 
+.chart-container ngx-charts-line-chart {
+  width: 100%;
+  max-width: 800px;
+}
+
+@media (min-width: 768px) {
+  .numbers-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .numbers-container div {
+    margin: 0 10px;
+  }
+}

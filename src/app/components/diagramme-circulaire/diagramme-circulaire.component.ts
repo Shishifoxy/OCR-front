@@ -4,9 +4,6 @@ import { ChartOptions } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
-
-
-
 @Component({
   selector: 'app-diagramme-circulaire',
   templateUrl: './diagramme-circulaire.component.html',
@@ -14,14 +11,9 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 })
 export class DiagrammeCirculaireComponent implements OnInit {
-  @ViewChild(BaseChartDirective) chart?: BaseChartDirective; // Ajout de cette ligne
-  public pieChartOptions: ChartOptions<'pie'> = {
-    responsive: false,
-  };
+  @ViewChild(BaseChartDirective) chart?: BaseChartDirective;
   public pieChartLabels: string[] = [];
   public pieChartDatasets: any[] = [];
-  public pieChartLegend = true;
-  public pieChartPlugins = [];
   public nbCountries
   public nbJos
 
@@ -35,9 +27,7 @@ export class DiagrammeCirculaireComponent implements OnInit {
       this.pieChartDatasets = [{ data: data.map(entry => entry.y), label: 'Medals' }];
     });
   }
-  getMedalData(data) {
-    // TODO
-  }
+
   ngAfterViewInit() {
   }
 

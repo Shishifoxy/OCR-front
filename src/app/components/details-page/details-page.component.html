@@ -1,11 +1,10 @@
 <div class="container">
-  <div class="country-name">{{this.medalsData[0].name}}</div>
+  <div class="country-name"><span>{{this.medalsData[0].name}}</span></div>
   <div class="numbers-container">
     <div>Nombre total de participations {{nbparticipations}}</div>
     <div>Nombre total de médailles {{nbMedals}}</div>
     <div>Nombre total d'athlètes {{nbAthlete}}</div>
   </div>
-
   <div class="chart-container">
     <ngx-charts-line-chart
       [view]="view"
