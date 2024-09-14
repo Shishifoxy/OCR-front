@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { CountryService } from './core/service/country.service';
-import { DiagrammeCirculaireComponent } from './components/diagramme-circulaire/diagramme-circulaire.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
 import { DetailsPageComponent } from './components/details-page/details-page.component';
@@ -19,7 +18,6 @@ import { InformationsJoComponent } from './components/informations-jo/informatio
   declarations: [
     AppComponent,
     HomePageComponent,
-    DiagrammeCirculaireComponent,
     DetailsPageComponent,
     InformationsJoComponent
   ],

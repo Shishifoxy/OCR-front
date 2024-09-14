@@ -31,11 +31,16 @@ nbAthlete: number;
     private route: ActivatedRoute,
     private countryService: CountryService,
     private cdr: ChangeDetectorRef,
-    private router:Router
-  ) { }
+    private router: Router
+  ) {
+  }
 
   onResize($event: any) {
-    this.view = [$event.target.innerWidth/1.5, 400];
+    this.view = [$event.target.innerWidth / 1.5, 400];
+  }
+
+  goBack() {
+    this.router.navigate(['/'])
   }
 
   ngOnInit(): void {
@@ -47,22 +52,21 @@ nbAthlete: number;
       const country = countries.find(c => c.id === this.countryId);
       if (country) {
         countryName = country.country;
-      this.countryService.getMedalsByCountry(countryName).subscribe(data => {
-        const participations = data.map(participation => ({
-          name: participation.year,
-          value: participation.medalsCount
-        }));
-        this.medalsData = [
-          {
-            name: countryName,
-            series: participations
-          }
-        ];
+        this.countryService.getMedalsByCountry(countryName).subscribe(data => {
+          const participations = data.map(participation => ({
+            name: participation.year,
+            value: participation.medalsCount
+          }));
+          this.medalsData = [
+            {
+              name: countryName,
+              series: participations
+            }
+          ];
         this.nbparticipations = countries.find(c => c.id === this.countryId).participations.length;
         this.nbMedals = countries.find(c => c.id === this.countryId).participations.reduce((total, participation) => total + participation.medalsCount, 0);
         this.nbAthlete = countries.find(c => c.id === this.countryId).participations.reduce((total, participation) => total + participation.athleteCount, 0);
         this.countryName = countryName;
-        console.log('Medals Data:', this.medalsData);
         this.cdr.detectChanges();
       });
     }

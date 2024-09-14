@@ -3,8 +3,57 @@
   justify-content: center;
   align-items: center;
 }
+
 .container {
   text-align: center;
   display: flex;
   flex-direction: column
 }
+
+.medailles {
+  background-color: darkcyan;
+  color: white;
+  height: 60px;
+  width: 180px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+::ng-deep ngx-tooltip-content.ngx-charts-tooltip-content.type-tooltip {
+
+.tooltip-caret.position-top {
+  border-top-color: darkcyan;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+background-color: darkcyan
+
+;
+color: white
+
+;
+box-shadow:
+
+0
+6
+px
+
+20
+px
+
+0
+rgba
+
+(
+0
+,
+0
+,
+0
+,
+0.2
+)
+;
+}
+
+

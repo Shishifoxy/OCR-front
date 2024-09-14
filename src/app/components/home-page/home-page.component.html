@@ -1,6 +1,7 @@
 <div class="container">
   <div class="text-center">
     <img src="assets/images/line.png" alt="line">
+    <div><span class="medailles">Médailles par pays</span></div>
     <div>
       <app-informations-jo [nbJos]="nbJos" [nbCountries]="nbCountries"></app-informations-jo>
     </div>
@@ -10,6 +11,7 @@
       (window:resize)="onResize($event)"
       [view]="view"
       *ngIf="single"
+      [labels]="showLabels"
       [results]="single"
       (select)="onSelect($event)"
     >

@@ -13,6 +13,29 @@
   margin-bottom: 20px;
 }
 
+.go-back-button {
+  background-color: #008B8B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: left;
+  width: fit-content;
+}
+
+.go-back-button:hover {
+  background-color: #006666;
+}
+
+.go-back-container {
+  align-self: flex-start;
+  width: 100%;
+}
+
 .country-name span {
   background-color: turquoise;
   color: white;
